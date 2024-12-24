@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
+  background: theme(colors.san-juan.50);
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
