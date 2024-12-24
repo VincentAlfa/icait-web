@@ -9,17 +9,17 @@ const AboutConference = () => {
           <div className="w-4 h-10 bg-gradient-to-b from-[#F2C204] to-[#734310] rounded-lg mr-1"></div>
           <h2 className="text-4xl mb-2 font-medium">About Conference</h2>
         </div>
-        <Card className="flex flex-col md:flex-row overflow-hidden shadow-none border-0 bg-transparent">
-          <div className="mt-4 md:w-1/2 max-w-[360px] max-h-[450px]">
+        <Card className="flex flex-col md:flex-row overflow-hidden shadow-none border-0 bg-transparent min-h-[450px]">
+          <div className="mt-4 md:w-2/5 max-w-[360px]">
             <Image
               src="/conference.jpeg"
               alt="Conference"
-              className="w-full h-full object-cover border-0"
+              className="w-full h-full object-cover"
               width={360}
               height={450}
             />
           </div>
-          <div className="ml-10 md:w-1/2 p-4">
+          <div className="flex flex-col justify-center  ml-10 md:w-3/5 px-0">
             <p className="font-normal text-xl">
               The International Conference on Artificial Intelligence Technology
               (ICAIT) aims at becoming a venue to deliver and to communicate
