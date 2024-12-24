@@ -1,20 +1,26 @@
+import Image from "next/image";
 import { Card } from "./ui/card";
 
 const AboutConference = () => {
   return (
     <section className="p-6 bg-gray-50">
       <div className="mx-[140px] my-[64px]">
-        <h2 className="text-2xl mb-4">About Conference</h2>
-        <Card className="flex flex-col md:flex-row rounded-lg overflow-hidden border-0 bg-transparent">
-          <div className="md:w-1/2">
-            <img
-              src="/public/conference.jpeg"
+        <div className="flex">
+          <div className="w-4 h-10 bg-gradient-to-b from-[#F2C204] to-[#734310] rounded-lg mr-1"></div>
+          <h2 className="text-4xl mb-2 font-medium">About Conference</h2>
+        </div>
+        <Card className="flex flex-col md:flex-row overflow-hidden shadow-none border-0 bg-transparent">
+          <div className="mt-4 md:w-1/2 max-w-[360px] max-h-[450px]">
+            <Image
+              src="/conference.jpeg"
               alt="Conference"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover border-0"
+              width={360}
+              height={450}
             />
           </div>
-          <div className="md:w-1/2 p-4">
-            <p className="text-gray-700 text-[16px]">
+          <div className="ml-10 md:w-1/2 p-4">
+            <p className="font-normal text-xl">
               The International Conference on Artificial Intelligence Technology
               (ICAIT) aims at becoming a venue to deliver and to communicate
               recent progress of the artificial intelligence research and its
@@ -22,7 +28,7 @@ const AboutConference = () => {
               scholars and practitioners to disseminate and discuss the ongoing
               research in the field of Artificial Intelligence.
             </p>
-            <p className="mt-4 text-gray-700 text-[16px]">
+            <p className="mt-7 font-normal text-xl">
               The 1<sup>st</sup> ICAIT (ICAIT2025) will be held in Yogyakarta,
               Indonesia on 10<sup>th</sup> - 11<sup>th</sup> September, 2025. It
               is conducted by the Artificial Intelligence Research Group of the
