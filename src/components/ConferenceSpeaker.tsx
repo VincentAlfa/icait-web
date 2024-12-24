@@ -12,22 +12,24 @@ const speakers = [
 const ConferenceSpeakers = () => {
   return (
     <section className="p-6 bg-blue-900 text-white">
-      <h2 className="text-2xl font-bold mb-4">Conference Speakers</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-        {speakers.map((speaker, index) => (
-          <Card
-            key={index}
-            className="bg-yellow-400 rounded-lg p-4 flex flex-col items-center"
-          >
-            <img
-              src={speaker.image} // Ganti dengan path gambar yang sesuai
-              alt={speaker.name}
-              className="w-32 h-32 rounded-full object-cover mb-2"
-            />
-            <h3 className="text-lg font-semibold">{speaker.name}</h3>
-            <p className="text-sm">{speaker.university}</p>
-          </Card>
-        ))}
+      <div className="mx-[140px] my-[64px]">
+        <h2 className="text-2xl font-bold mb-4 ">Conference Speakers</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {speakers.map((speaker, index) => (
+            <Card
+              key={index}
+              className="bg-yellow-400 rounded-lg p-4 flex flex-col items-center"
+            >
+              <img
+                src={speaker.image} // Ganti dengan path gambar yang sesuai
+                alt={speaker.name}
+                className="w-32 h-32 rounded-full object-cover mb-2"
+              />
+              <h3 className="text-lg font-semibold">{speaker.name}</h3>
+              <p className="text-sm">{speaker.university}</p>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );
