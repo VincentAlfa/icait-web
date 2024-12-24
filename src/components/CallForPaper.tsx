@@ -1,4 +1,3 @@
-// components/CallForPaper.tsx
 const CallForPaper = () => {
   return (
     <section className="p-6 bg-gray-100">
@@ -33,9 +32,9 @@ const CallForPaper = () => {
             <li>AI Applications in Various Domains</li>
           </ul>
         </div>
-        <p className="mt-4">
+        <p className="mt-4 text-gray-500">
           Accepted papers will be submitted for inclusion into IEEE Xplore
-          subject to meeting IEEE Xplore's scope and quality requirements.
+          subject to meeting IEEE Xplores scope and quality requirements.
         </p>
       </div>
     </section>

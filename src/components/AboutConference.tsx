@@ -24,7 +24,7 @@ const AboutConference = () => {
             </p>
             <p className="mt-4 text-gray-700 text-[16px]">
               The 1<sup>st</sup> ICAIT (ICAIT2025) will be held in Yogyakarta,
-              Indonesia on 10<sup>th</sup> - 17<sup>th</sup> September, 2025. It
+              Indonesia on 10<sup>th</sup> - 11<sup>th</sup> September, 2025. It
               is conducted by the Artificial Intelligence Research Group of the
               Informatics Department, Faculty of Industrial Technology,
               Universitas Ahmad Dahlan, Indonesia. The 1<sup>st</sup> ICAT is
