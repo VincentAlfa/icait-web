@@ -1,21 +1,22 @@
-import Image from 'next/image';
 import { committeeData } from './commitee-data';
 import CommitteeSection from './commitee-section';
-import orangeRect from '@/assets/Rectangle 9.svg';
 
 export default function SteeringCommittee() {
   return (
-    <div className='w-full px-4 py-8 md:px-10'>
-      <h1 className='mb-5 flex gap-2 text-4xl font-medium'>
-        <Image src={orangeRect} alt='orange rect' />
-        Committee
-      </h1>
-
-      <div className='grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-10'>
-        {committeeData.map((section, index) => (
-          <CommitteeSection key={index} section={section} />
-        ))}
+    <section className='p-6'>
+      <div className='mx-auto max-w-screen-xl'>
+        <div className='mb-5 flex items-center'>
+          <div className='mr-1 h-10 w-4 rounded-lg bg-gradient-to-b from-[#F2C204] to-[#734310]'></div>
+          <h1 className='text-xl font-medium sm:text-2xl md:text-3xl'>
+            Steering Committee
+          </h1>
+        </div>
+        <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
+          {committeeData.map((section, index) => (
+            <CommitteeSection key={index} section={section} />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

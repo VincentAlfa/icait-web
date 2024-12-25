@@ -1,37 +1,31 @@
-import Image from 'next/image';
 import NoShowPolicy from './no-show-policy';
 import PaperPreparation from './paper-preparation';
 import { timelineData } from './timeline-data';
 import { TimelineLayout } from './timeline-layout';
-import blueRect from '@/assets/Rectangle 10.svg';
-import orangeRect from '@/assets/Rectangle 9.svg';
 
 export default function ForAuthor() {
   return (
-    <main className='min-h-screen w-full px-4 py-8 md:px-10'>
-      <div className='mx-auto flex flex-col gap-8 md:gap-3'>
-        <h1 className='flex gap-2 text-4xl font-medium'>
-          <Image src={orangeRect} alt='orange rect' />
-          For Author
-        </h1>
-        <div className='flex flex-col md:flex-row'>
-          <div className='relative flex w-full flex-col space-y-4 md:w-2/5'>
-            <h2 className='flex gap-2 text-2xl font-medium'>
-              <Image src={blueRect} alt='blue rect' />
-              Timeline
-            </h2>
-            <div className='relative overflow-x-hidden'>
-              <div className='flex px-4 md:justify-center md:px-0'>
-                <TimelineLayout items={timelineData} />
-              </div>
+    <section className='p-6'>
+      <div className='mx-auto max-w-screen-xl'>
+        <div className='mb-5 flex items-center'>
+          <div className='  mr-1 h-10 w-4 rounded-lg bg-gradient-to-b from-[#F2C204] to-[#734310]'></div>
+          <h1 className='text-xl font-medium sm:text-2xl md:text-3xl'>
+            For Author
+          </h1>
+        </div>
+        <div className='flex flex-col gap-8 md:flex-row'>
+          <div className='w-full md:w-2/5'>
+            <h2 className='mb-4 text-lg font-medium sm:text-xl'>Timeline</h2>
+            <div className='relative overflow-x-hidden px-[120px] md:px-[150px]'>
+              <TimelineLayout items={timelineData} />
             </div>
           </div>
-          <div className='mt-8 flex w-full flex-col md:px-0 gap-10 md:mt-0 md:w-3/5'>
+          <div className='w-full space-y-8 md:w-3/5'>
             <PaperPreparation />
             <NoShowPolicy />
           </div>
         </div>
       </div>
-    </main>
+    </section>
   );
 }

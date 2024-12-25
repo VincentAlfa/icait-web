@@ -23,11 +23,14 @@ type RegistrationTableProps = {
 
 export function RegistrationTable({ data }: RegistrationTableProps) {
   return (
-    <div className='rounded-md border'>
+    <div className='rounded-md border border-gray-300'>
       <Table>
         <TableHeader>
-          <TableRow>
-            <TableHead rowSpan={2} className='h-12 border-r'></TableHead>
+          <TableRow className='border-b border-gray-300'>
+            <TableHead
+              rowSpan={2}
+              className='h-12 border-r border-gray-300'
+            ></TableHead>
             <TableHead className='h-12 text-center' colSpan={2}>
               Student
             </TableHead>
@@ -35,31 +38,35 @@ export function RegistrationTable({ data }: RegistrationTableProps) {
               Professional
             </TableHead>
           </TableRow>
-          <TableRow className='border'>
-            <TableHead className='h-12 border-r text-center'>
+          <TableRow className='border-b border-gray-300'>
+            <TableHead className='h-12 border-r border-gray-300 text-center'>
               International
             </TableHead>
-            <TableHead className='h-12 border-r text-center'>Local</TableHead>
-            <TableHead className='h-12 border-r text-center'>
+            <TableHead className='h-12 border-r border-gray-300 text-center'>
+              Local
+            </TableHead>
+            <TableHead className='h-12 border-r border-gray-300 text-center'>
               International
             </TableHead>
-            <TableHead className='text-center border-r h-12'>Local</TableHead>
+            <TableHead className='h-12 text-center'>Local</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {data.map((row, index) => (
             <TableRow key={index}>
-              <TableCell className='border-r font-medium'>{row.type}</TableCell>
-              <TableCell className='border-r text-center'>
+              <TableCell className='border-r border-gray-300 font-medium'>
+                {row.type}
+              </TableCell>
+              <TableCell className='border-r border-gray-300 text-center'>
                 {row.student.international}
               </TableCell>
-              <TableCell className='border-r text-center'>
+              <TableCell className='border-r border-gray-300 text-center'>
                 {row.student.local}
               </TableCell>
-              <TableCell className='border-r text-center'>
+              <TableCell className='border-r border-gray-300 text-center'>
                 {row.professional.international}
               </TableCell>
-              <TableCell className='border-r text-center'>
+              <TableCell className='text-center'>
                 {row.professional.local}
               </TableCell>
             </TableRow>
