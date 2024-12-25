@@ -18,8 +18,7 @@ export default function CommitteeSection({ section }: CommitteeSectionProps) {
             key={index}
             className='flex flex-col gap-0.5 font-medium md:flex-row md:gap-1'
           >
-            <p className='text-sm md:text-base'>{member.name}</p>
-            <p className='text-sm md:text-base'>({member.institution})</p>
+            <p className='text-sm md:text-base'>{member.name} &#40;{member.institution}&#41;</p>
           </div>
         ))}
       </div>

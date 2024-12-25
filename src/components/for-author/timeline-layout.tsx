@@ -25,9 +25,9 @@ export const TimelineLayout = ({ items }: TimelineLayoutProps) => {
         <TimelineItem key={index}>
           {index !== items.length - 1 && <TimelineConnector />}
           <TimelineHeader>
-            <TimelineTime>{item.date}</TimelineTime>
+            <TimelineTime className='text-sm leading-3.5 font-semibold tracking-tight'>{item.date}</TimelineTime>
             <TimelineIcon />
-            <TimelineTitle>{item.title}</TimelineTitle>
+            <TimelineTitle className='text-sm leading-3.5 font-semibold tracking-tight'>{item.title}</TimelineTitle>
           </TimelineHeader>
         </TimelineItem>
       ))}

@@ -23,7 +23,7 @@ type RegistrationTableProps = {
 
 export function RegistrationTable({ data }: RegistrationTableProps) {
   return (
-    <div className='rounded-md border border-gray-300'>
+    <div className='rounded-md border border-gray-300 mt-2'>
       <Table>
         <TableHeader>
           <TableRow className='border-b border-gray-300'>
