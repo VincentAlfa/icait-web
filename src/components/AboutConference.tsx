@@ -13,7 +13,7 @@ const AboutConference = () => {
         <div className="flex flex-col items-center gap-5 w-full md:flex-row">
           <div className=" md:w-[40%] lg:w-[30%]">
             <Image
-              src={conferenceImg}
+              src={"/conference.jpeg"}
               alt="Conference"
               className="object-cover h-[300px] md:h-[400px] lg:[450px]"
               width={360}

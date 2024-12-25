@@ -1,18 +1,14 @@
 import { Card } from "./ui/card";
-import Header1 from "./ui/Header1";
-import speaker1 from "../assets/img/speaker-1.jpeg";
-import speaker2 from "../assets/img/speaker-2.jpeg";
-import speaker3 from "../assets/img/speaker-3.jpeg";
 import Image from "next/image";
 
 const speakers = [
-  { name: "John Doe", university: "Univ A", image: "speaker-1.jpeg" },
-  { name: "John Doe", university: "Univ A", image: "speaker-2.jpeg" },
-  { name: "John Doe", university: "Univ A", image: "speaker-3.jpeg" },
-  { name: "John Doe", university: "Univ A", image: "speaker-1.jpeg" },
-  { name: "John Doe", university: "Univ A", image: "speaker-1.jpeg" },
-  { name: "John Doe", university: "Univ A", image: "speaker-1.jpeg" },
-  { name: "John Doe", university: "Univ A", image: "speaker-1.jpeg" },
+  { name: "John Doe", university: "Univ A", image: "/speaker-2.jpeg" },
+  { name: "John Doe", university: "Univ A", image: "/speaker-2.jpeg" },
+  { name: "John Doe", university: "Univ A", image: "/speaker-2.jpeg" },
+  { name: "John Doe", university: "Univ A", image: "/speaker-2.jpeg" },
+  { name: "John Doe", university: "Univ A", image: "/speaker-2.jpeg" },
+  { name: "John Doe", university: "Univ A", image: "/speaker-2.jpeg" },
+  { name: "John Doe", university: "Univ A", image: "/speaker-2.jpeg" },
 ];
 
 const ConferenceSpeakers = () => {
@@ -32,10 +28,12 @@ const ConferenceSpeakers = () => {
               className="bg-yellow-400 rounded-xl border-none p-4 flex flex-col items-center max-w-[260px] mx-auto hover:bg-gradient-to-b from-[#F2C204] to-[#734310] hover:text-white"
             >
               <div className="w-full mb-2">
-                <img
-                  src={speaker.image} // Ganti dengan path gambar yang sesuai
+                <Image
+                  src={speaker.image}
                   alt={speaker.name}
-                  className="h-[350px] rounded-lg object-cover "
+                  className="h-[350px] rounded-lg object-cover"
+                  width={232}
+                  height={330}
                 />
               </div>
 
