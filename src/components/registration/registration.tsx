@@ -1,37 +1,28 @@
 import { Button } from '@/components/ui/button';
 import { registrationData } from './registration-data';
 import { RegistrationTable } from './Registration-table';
-import blueRect from '@/assets/Rectangle 10.svg';
-import orangeRect from '@/assets/Rectangle 9.svg';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Registration() {
   return (
-    <section className='mx-auto w-full px-4 py-8 md:px-10'>
-      <div>
-        <header className='mb-4'>
-          <h1 className='flex items-center gap-2 text-3xl font-medium'>
-            <Image src={orangeRect} alt='orange rect' />
+    <section className='p-6'>
+      <div className='mx-auto max-w-screen-xl'>
+        <div className='mb-5 flex items-center'>
+          <div className='mr-1 h-10 w-4 rounded-lg bg-gradient-to-b from-[#F2C204] to-[#734310]'></div>
+          <h1 className='text-xl font-medium sm:text-2xl md:text-3xl'>
             Registration
           </h1>
-        </header>
-
-        <div className='space-y-6'>
-          <div className='space-y-4'>
-            <h2 className='flex items-center gap-2 text-xl font-semibold'>
-              <Image src={blueRect} alt='orange rect' />
+        </div>
+        <div className='space-y-8'>
+          <div>
+            <h2 className='mb-4 text-lg font-medium sm:text-xl'>
               Registration Fee
             </h2>
             <RegistrationTable data={registrationData} />
           </div>
-
           <div className='flex justify-center'>
             <Link href={''}>
-              <Button
-                size='lg'
-                className='rounded bg-san-juan-700 px-6 py-2 font-semibold text-white hover:bg-[#1e4976]/90'
-              >
+              <Button size='lg' className='bg-[#1e4976] hover:bg-[#1e4976]/90'>
                 Register Here
               </Button>
             </Link>

@@ -36,8 +36,8 @@ const AboutConference = () => {
               is conducted by the Artificial Intelligence Research Group of the
               Informatics Department, Faculty of Industrial Technology,
               Universitas Ahmad Dahlan, Indonesia. The 1<sup>st</sup> ICAT is
-              held on the theme of "Artificial Intelligence Applications for a
-              Prosperous and Sustainable Living in the Modern Society."
+              held on the theme of &quot;Artificial Intelligence Applications for a
+              Prosperous and Sustainable Living in the Modern Society.&quot;
             </p>
           </div>
         </div>

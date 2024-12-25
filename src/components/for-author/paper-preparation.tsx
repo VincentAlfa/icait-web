@@ -1,12 +1,9 @@
 import Link from 'next/link';
-import blueRect from '@/assets/Rectangle 10.svg';
-import Image from 'next/image';
-
 export default function PaperPreparation() {
   return (
     <div className='space-y-2'>
       <h2 className='flex gap-2 text-2xl font-medium'>
-        <Image src={blueRect} alt='orange rect' />
+        <div className='mr-1 h-8 w-4 rounded-lg bg-gradient-to-b from-[#3A80BD] to-[#15263C]'></div>
         Paper Preparation
       </h2>
       <ol className='w-full list-decimal pl-6 text-lg'>
