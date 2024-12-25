@@ -13,7 +13,7 @@ const AboutConference = () => {
         <div className="flex flex-col items-center gap-5 w-full md:flex-row">
           <div className=" md:w-[40%] lg:w-[30%]">
             <Image
-              src="/conference.jpeg"
+              src={conferenceImg}
               alt="Conference"
               className="object-cover h-[300px] md:h-[400px] lg:[450px]"
               width={360}
@@ -23,11 +23,12 @@ const AboutConference = () => {
           <div className="flex flex-col md:w-[60%] lg:w-[70%]">
             <p className="font-normal text-xl">
               The International Conference on Artificial Intelligence Technology
-              (ICAIT) aims at becoming a venue to deliver and to communicate
-              recent progress of the artificial intelligence research and its
-              applications in various domains, as well as bringing together
-              scholars and practitioners to disseminate and discuss the ongoing
-              research in the field of Artificial Intelligence.
+              &#40;ICAIT&#41; aims at becoming a venue to deliver and to
+              communicate recent progress of the artificial intelligence
+              research and its applications in various domains, as well as
+              bringing together scholars and practitioners to disseminate and
+              discuss the ongoing research in the field of Artificial
+              Intelligence.
             </p>
             <p className="mt-7 font-normal text-xl">
               The 1<sup>st</sup> ICAIT (ICAIT2025) will be held in Yogyakarta,

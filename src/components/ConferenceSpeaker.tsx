@@ -1,4 +1,9 @@
 import { Card } from "./ui/card";
+import Header1 from "./ui/Header1";
+import speaker1 from "../assets/img/speaker-1.jpeg";
+import speaker2 from "../assets/img/speaker-2.jpeg";
+import speaker3 from "../assets/img/speaker-3.jpeg";
+import Image from "next/image";
 
 const speakers = [
   { name: "John Doe", university: "Univ A", image: "speaker-1.jpeg" },
