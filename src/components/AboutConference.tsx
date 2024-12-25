@@ -1,25 +1,26 @@
 import Image from "next/image";
-import { Card } from "./ui/card";
 
 const AboutConference = () => {
   return (
     <section className="p-6 bg-gray-50">
-      <div className="mx-[140px] my-[64px]">
-        <div className="flex">
+      <div className="max-w-screen-xl mx-auto">
+        <div className="flex items-center mb-5">
           <div className="w-4 h-10 bg-gradient-to-b from-[#F2C204] to-[#734310] rounded-lg mr-1"></div>
-          <h2 className="text-4xl mb-2 font-medium">About Conference</h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-medium">
+            About Conference
+          </h2>
         </div>
-        <Card className="flex flex-col md:flex-row overflow-hidden shadow-none border-0 bg-transparent min-h-[450px]">
-          <div className="mt-4 md:w-2/5 max-w-[360px]">
+        <div className="flex flex-col items-center gap-5 w-full md:flex-row">
+          <div className=" md:w-[40%] lg:w-[30%]">
             <Image
               src="/conference.jpeg"
               alt="Conference"
-              className="w-full h-full object-cover"
+              className="object-cover h-[300px] md:h-[400px] lg:[450px]"
               width={360}
               height={450}
             />
           </div>
-          <div className="flex flex-col justify-center  ml-10 md:w-3/5 px-0">
+          <div className="flex flex-col md:w-[60%] lg:w-[70%]">
             <p className="font-normal text-xl">
               The International Conference on Artificial Intelligence Technology
               (ICAIT) aims at becoming a venue to deliver and to communicate
@@ -38,7 +39,7 @@ const AboutConference = () => {
               Prosperous and Sustainable Living in the Modern Society."
             </p>
           </div>
-        </Card>
+        </div>
       </div>
     </section>
   );
