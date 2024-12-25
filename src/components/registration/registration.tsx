@@ -2,22 +2,17 @@ import { Button } from '@/components/ui/button';
 import { registrationData } from './registration-data';
 import { RegistrationTable } from './Registration-table';
 import Link from 'next/link';
+import Header2 from '../ui/Header2';
+import Header1 from '../ui/Header1';
 
 export default function Registration() {
   return (
-    <section className='p-6'>
+    <section className='p-6' id='registration'>
       <div className='mx-auto max-w-screen-xl'>
-        <div className='mb-5 flex items-center'>
-          <div className='mr-1 h-10 w-4 rounded-lg bg-gradient-to-b from-[#F2C204] to-[#734310]'></div>
-          <h1 className='text-xl font-medium sm:text-2xl md:text-3xl'>
-            Registration
-          </h1>
-        </div>
+        <Header1 title='Registration'/>
         <div className='space-y-8'>
           <div>
-            <h2 className='mb-4 text-lg font-medium sm:text-xl'>
-              Registration Fee
-            </h2>
+            <Header2 title='Registration Fee'/>
             <RegistrationTable data={registrationData} />
           </div>
           <div className='flex justify-center'>

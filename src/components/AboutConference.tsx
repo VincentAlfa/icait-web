@@ -1,15 +1,11 @@
 import Image from "next/image";
+import Header1 from "./ui/Header1";
 
 const AboutConference = () => {
   return (
-    <section className="p-6 bg-gray-50">
+    <section className="p-6 bg-gray-50" id="about">
       <div className="max-w-screen-xl mx-auto">
-        <div className="flex items-center mb-5">
-          <div className="w-4 h-10 bg-gradient-to-b from-[#F2C204] to-[#734310] rounded-lg mr-1"></div>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-medium">
-            About Conference
-          </h2>
-        </div>
+        <Header1 title="About Conference"/>
         <div className="flex flex-col items-center gap-5 w-full md:flex-row">
           <div className=" md:w-[40%] lg:w-[30%]">
             <Image
