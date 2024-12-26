@@ -13,7 +13,7 @@ export default function ForAuthor() {
         <div className='flex flex-col gap-8 md:flex-row'>
           <div className='w-full md:w-2/5'>
           <Header2 title='Timeline' />
-            <div className='mt-2 relative overflow-x-hidden px-[120px] md:px-[150px]'>
+            <div className='relative overflow-x-hidden px-[120px] md:px-[150px]'>
               <TimelineLayout items={timelineData} />
             </div>
           </div>

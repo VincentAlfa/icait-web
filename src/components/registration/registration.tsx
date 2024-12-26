@@ -17,7 +17,7 @@ export default function Registration() {
           </div>
           <div className='flex justify-center'>
             <Link href={''}>
-              <Button size='lg' className='bg-[#1e4976] hover:bg-[#1e4976]/90'>
+              <Button size='lg' className='bg-san-juan-700 hover:bg-san-juan-700/90'>
                 Register Here
               </Button>
             </Link>

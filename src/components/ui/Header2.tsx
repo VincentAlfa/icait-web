@@ -7,7 +7,7 @@ const Header2 = ({
 }) => {
   return (
     <div
-      className={`flex gap-1 ${
+      className={`flex gap-1 mb-2 ${
         type === "light" ? "text-slate-50" : "text-slate-900"
       }`}
     >
