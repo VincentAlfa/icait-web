@@ -5,11 +5,11 @@ import Countdown from './Countdown';
 const Footer = () => {
   return (
     <footer
-      className='bg-gradient-to-br from-saffron-400 to-saffron-500 p-6 text-slate-900'
+      className='bg-gradient-to-br from-saffron-400 to-saffron-500 px-6 pb-36 pt-6 text-slate-900 md:p-6'
       id='contact'
     >
       <div className='mx-auto max-w-screen-xl'>
-        <div className='flex flex-col justify-between md:flex-row'>
+        <div className='flex flex-col justify-between gap-3 md:flex-row'>
           <div>
             <h3 className='mb-3 text-2xl font-medium capitalize'>Contact</h3>
             <ul className='flex flex-col gap-1'>
@@ -52,12 +52,12 @@ const Footer = () => {
               referrerPolicy='no-referrer-when-downgrade'
             ></iframe>
           </div>
-          <div>
+          <div className='relative'>
             <span className='mb-2 block text-8xl font-extrabold tracking-wider'>
               ICAIT
             </span>
             <span className='mb-1 block text-base'>Started in</span>
-            <Countdown />
+            <Countdown className='absolute -right-[1.125rem] md:relative md:right-0' />
           </div>
         </div>
       </div>
