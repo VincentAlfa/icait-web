@@ -1,4 +1,4 @@
-import Header1 from '../ui/Header1';
+import Header1 from '../components/Header1';
 import { committeeData } from './commitee-data';
 import CommitteeSection from './commitee-section';
 

@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import Header1 from './ui/Header1';
+import Header1 from './components/Header1';
 
 const AboutConference = () => {
   return (
-    <section className='bg-gray-50 p-6' id='about'>
+    <section className='p-6' id='about'>
       <div className='mx-auto max-w-screen-xl'>
         <Header1 title='About Conference' />
         <div className='flex w-full flex-col items-center gap-5 md:flex-row'>

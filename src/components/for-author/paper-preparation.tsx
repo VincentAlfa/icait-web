@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Header2 from '../ui/Header2';
+import Header2 from '../components/Header2';
 export default function PaperPreparation() {
   return (
     <div className='space-y-2'>

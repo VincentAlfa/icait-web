@@ -1,10 +1,10 @@
 'use client';
 
 import { DateTime } from 'luxon';
-import { Card, CardContent } from './ui/card';
+import { Card, CardContent } from '../ui/card';
 import { useEffect, useState } from 'react';
 
-const Countdown = ({ className }: { className: string }) => {
+const Countdown = ({ className }: { className?: string }) => {
   const [currentTime, setCurrentTime] = useState(
     DateTime.now().setZone('Asia/Jakarta'),
   );
