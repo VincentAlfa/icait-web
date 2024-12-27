@@ -4,10 +4,10 @@ import { Button } from './ui/button';
 
 const Hero = () => {
   return (
-    <div className='h-screen w-full'>
+    <div className='h-screen w-full' id='hero'>
       <div className="h-full w-full bg-[url('../assets/img/heroimage.webp')] bg-cover bg-center bg-no-repeat">
         <div className='h-full w-full place-content-center bg-black/20'>
-          <div className='mx-auto grid max-w-screen-xl'>
+          <div className='mx-auto mt-[4.5rem] grid max-w-screen-xl'>
             <div className='text-center'>
               <p className='mb-2 text-sm text-slate-50 md:text-base'>
                 10-11 September 2025, Yogyakarta, Indonesia
