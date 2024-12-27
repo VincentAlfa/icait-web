@@ -11,7 +11,7 @@ const speakers = [
 
 const ConferenceSpeakers = () => {
   return (
-    <section className="p-6 bg-blue-900 text-white" id="speaker">
+    <section className="p-6 bg-gradient-to-br from-san-juan-800 to-san-juan-950 text-white" id="speaker">
       <div className="max-w-screen-xl mx-auto">
         <Header1 title="Conference Speaker" type="light" />
         <div className="flex flex-wrap gap-4 justify-evenly items-center">
