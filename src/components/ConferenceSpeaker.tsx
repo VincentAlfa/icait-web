@@ -1,10 +1,8 @@
 import { Card } from "./ui/card";
 import Image from "next/image";
+import Header1 from "./ui/Header1";
 
 const speakers = [
-  { name: "John Doe", university: "Univ A", image: "/speaker-2.jpeg" },
-  { name: "John Doe", university: "Univ A", image: "/speaker-2.jpeg" },
-  { name: "John Doe", university: "Univ A", image: "/speaker-2.jpeg" },
   { name: "John Doe", university: "Univ A", image: "/speaker-2.jpeg" },
   { name: "John Doe", university: "Univ A", image: "/speaker-2.jpeg" },
   { name: "John Doe", university: "Univ A", image: "/speaker-2.jpeg" },
@@ -13,19 +11,14 @@ const speakers = [
 
 const ConferenceSpeakers = () => {
   return (
-    <section className="p-6 bg-blue-900 text-white">
+    <section className="p-6 bg-gradient-to-br from-san-juan-800 to-san-juan-950 text-white" id="speaker">
       <div className="max-w-screen-xl mx-auto">
-        <div className="flex items-center mb-5">
-          <div className="w-4 h-10 bg-gradient-to-b from-[#F2C204] to-[#734310] rounded-lg mr-1"></div>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-medium">
-            Conference Speaker
-          </h2>
-        </div>
+        <Header1 title="Conference Speaker" type="light" />
         <div className="flex flex-wrap gap-4 justify-evenly items-center">
           {speakers.map((speaker, index) => (
             <Card
               key={index}
-              className="bg-yellow-400 rounded-xl border-none p-4 flex flex-col items-center max-w-[260px] mx-auto hover:bg-gradient-to-b from-[#F2C204] to-[#734310] hover:text-white"
+              className="bg-gradient-to-b from-saffron-400 to-saffron-400 rounded-xl border-none p-4 flex flex-col items-center max-w-[260px] mx-auto hover:from-saffron-400 hover:to-saffron-800 hover:text-slate-50 transition-colors duration-300 ease-out"
             >
               <div className="w-full mb-2">
                 <Image
@@ -36,9 +29,10 @@ const ConferenceSpeakers = () => {
                   height={330}
                 />
               </div>
-
-              <h3 className="text-lg font-semibold">{speaker.name}</h3>
-              <p className="text-sm">{speaker.university}</p>
+              <div className="text-left self-start">
+                <h3 className="text-lg font-medium">{speaker.name}</h3>
+                <p className="text-sm">{speaker.university}</p>
+              </div>
             </Card>
           ))}
         </div>

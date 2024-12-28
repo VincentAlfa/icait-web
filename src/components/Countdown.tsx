@@ -1,34 +1,68 @@
-import { Card, CardContent } from "./ui/card";
+'use client';
+
+import { DateTime } from 'luxon';
+import { Card, CardContent } from './ui/card';
+import { useEffect, useState } from 'react';
 
 const Countdown = ({ className }: { className: string }) => {
+  const [currentTime, setCurrentTime] = useState(
+    DateTime.now().setZone('Asia/Jakarta'),
+  );
+  const targetTime: DateTime =
+    DateTime.fromISO('2025-09-10').setZone('Asia/Jakarta');
+
+  const [days, setDays] = useState<number>(0);
+  const [hours, setHours] = useState<number>(0);
+  const [minutes, setMinutes] = useState<number>(0);
+  const [seconds, setSeconds] = useState<number>(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const diff = targetTime.toUnixInteger() - currentTime.toUnixInteger();
+      const newdate = DateTime.now().setZone('Asia/Jakarta');
+      setCurrentTime(newdate);
+      setDays(Math.floor(diff / 86400));
+      setHours(Math.floor((diff % 86400) / 3600));
+      setMinutes(Math.floor((diff % 3600) / 60));
+      setSeconds(Math.floor(diff % 60));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [currentTime, targetTime]);
   return (
     <Card
       className={
-        "bg-san-juan-950 border-0 w-fit relative overflow-clip " + className
+        'relative w-fit overflow-clip border-0 bg-san-juan-950 ' + className
       }
     >
-      <CardContent className="p-8 relative z-10">
-        <div className="flex justify-center gap-4 text-slate-50">
-          <div className="flex flex-col text-center min-w-[4.4rem]">
-            <span className="font-bold text-[2.5rem] tabular-nums">76</span>
-            <span className="font-normal font-base">Days</span>
+      <CardContent className='relative z-10 p-7 md:p-8'>
+        <div className='flex justify-center gap-1 text-slate-50 md:gap-4'>
+          <div className='flex w-[4.3rem] flex-col text-center md:w-[4.4rem]'>
+            <span className='text-3xl font-bold tabular-nums md:text-4.5xl'>
+              {days < 10 ? '0' + days : days}
+            </span>
+            <span className='md:font-base font-normal'>Days</span>
           </div>
-          <div className="flex flex-col text-center min-w-[4.4rem]">
-            <span className="font-bold text-[2.5rem] tabular-nums">17</span>
-            <span className="font-normal font-base">Hours</span>
+          <div className='flex w-[4.3rem] flex-col text-center md:w-[4.4rem]'>
+            <span className='text-3xl font-bold tabular-nums md:text-4.5xl'>
+              {hours < 10 ? '0' + hours : hours}
+            </span>
+            <span className='md:font-base font-normal'>Hours</span>
           </div>
-          <div className="flex flex-col text-center min-w-[4.4rem]">
-            <span className="font-bold text-[2.5rem] tabular-nums">39</span>
-            <span className="font-normal font-base">Minutes</span>
+          <div className='flex w-[4.3rem] flex-col text-center md:w-[4.4rem]'>
+            <span className='text-3xl font-bold tabular-nums md:text-4.5xl'>
+              {minutes < 10 ? '0' + minutes : minutes}
+            </span>
+            <span className='md:font-base font-normal'>Minutes</span>
           </div>
-          <div className="flex flex-col text-center min-w-[4.4rem]">
-            <span className="font-bold text-[2.5rem] tabular-nums">05</span>
-            <span className="font-normal font-base">Seconds</span>
+          <div className='flex w-[4.3rem] flex-col text-center md:w-[4.4rem]'>
+            <span className='text-3xl font-bold tabular-nums md:text-4.5xl'>
+              {seconds < 10 ? '0' + seconds : seconds}
+            </span>
+            <span className='md:font-base font-normal'>Seconds</span>
           </div>
         </div>
       </CardContent>
-      <div className="absolute top-8 -left-9 bg-san-juan-800 rounded-full w-[244px] h-[244px] blur-3xl"></div>
-      <div className="absolute bottom-11 -right-20 bg-san-juan-800 rounded-full w-[178px] h-[178px] blur-3xl"></div>
+      <div className='absolute -left-9 top-8 h-[244px] w-[244px] rounded-full bg-san-juan-800 blur-3xl'></div>
+      <div className='absolute -right-20 bottom-11 h-[178px] w-[178px] rounded-full bg-san-juan-800 blur-3xl'></div>
     </Card>
   );
 };
