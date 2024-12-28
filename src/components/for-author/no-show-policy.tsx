@@ -1,4 +1,4 @@
-import Header2 from '../ui/Header2';
+import Header2 from '../components/Header2';
 
 export default function NoShowPolicy() {
   return (

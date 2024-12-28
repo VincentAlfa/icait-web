@@ -8,9 +8,9 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from './navigation-menu';
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from './sheet';
-import { Button } from './button';
+} from '../ui/navigation-menu';
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '../ui/sheet';
+import { Button } from '../ui/button';
 import { Menu } from 'lucide-react';
 
 const navigationItems = [

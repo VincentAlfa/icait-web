@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Countdown from './Countdown';
+import Countdown from './components/Countdown';
 import { Button } from './ui/button';
 
 const Hero = () => {
@@ -23,9 +23,9 @@ const Hero = () => {
               <p className='mb-1 text-sm text-slate-50 md:text-base'>
                 Started in
               </p>
-              <Countdown className='mx-auto mb-6' />
+              <Countdown className='mx-auto' />
               <Button
-                className='bg-san-juan-700 hover:bg-san-juan-700/90'
+                className='mt-6 bg-san-juan-700 hover:bg-san-juan-700/90'
                 asChild
               >
                 <Link href='#'>Registration Here</Link>
