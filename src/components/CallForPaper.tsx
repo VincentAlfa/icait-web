@@ -7,7 +7,7 @@ const CallForPaper = () => {
       <div className='mx-auto max-w-screen-xl'>
         <Header1 title='Call for Paper' />
         <Header2 title='Conference Tracks' />
-        <p className='mb-4 text-base'>
+        <p className='mb-4'>
           We invite researchers to submit high-quality and unpublished research
           papers in the following topics:
         </p>
@@ -29,7 +29,7 @@ const CallForPaper = () => {
           <li>AI in Transportation and Automotive</li>
           <li>AI Applications in Various Domains</li>
         </ul>
-        <p className='mt-4 text-sm font-light text-slate-600'>
+        <p className='mt-4'>
           Accepted papers will be submitted for inclusion into IEEE Xplore
           subject to meeting IEEE Xplores scope and quality requirements.
         </p>
